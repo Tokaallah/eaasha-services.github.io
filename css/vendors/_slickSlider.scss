@@ -1,0 +1,134 @@
+// -----------------------------------------------------------------------------
+// SLICK SLIDER
+// -----------------------------------------------------------------------------
+.slick-slide{
+    outline: none;
+}
+
+.slick-arrow{
+    width: 20px;
+    height: 20px;
+    display: block;
+    border: none;
+    background: $secondary-color;
+    padding: 18px;
+    @include border-radius(50%);
+    outline: none;
+    cursor: pointer;
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    @include transition;
+
+    &::before{
+        content: '';
+        width: 8px;
+        height: 8px;
+        display: block;
+        border: none;
+        border-top: 1px solid #ffffff;
+        border-left: 1px solid #ffffff;
+        @include rotate(90deg);
+        position: relative;
+        top: -3.5px;
+        left: -6.5px;
+    }
+
+    &.slick-next{
+        right: 5%;
+        transform: rotate(45deg);
+    }
+
+    &.slick-prev{
+        left: 5%;
+        transform: rotate(225deg);
+    }
+}
+
+.slick-dots{
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+
+    li{
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        @include border-radius(50%);
+        border: 1px solid $primary-color;
+        position: relative;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+        @include transition;
+
+        button{
+            width: 20px;
+            height: 20px;
+            display: block;
+            font-size: 0;
+            line-height: 0;
+            padding: 5px;
+            cursor: pointer;
+            color: transparent;
+            border: 0;
+            outline: none;
+            background: transparent;
+            @include transition;
+
+            &::before{
+                content: '';
+                width: 6px;
+                height: 6px;
+                display: block;
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                text-align: center;
+                opacity: 0.25;
+                background: $primary-color;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                @include border-radius(50%);
+                @include transition;
+            }
+        }
+
+        &.slick-active{
+            button{
+                &::before{
+                    opacity: 1;
+                    @include scale(1.6);
+                }
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// SLICK SLIDER (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+    .slick-list{
+        direction: ltr;
+
+        .slick-track{
+            direction: rtl;
+        }
+    }
+
+    .slick-arrow{
+        direction: ltr;
+    }
+}
+
+// -----------------------------------------------------------------------------
+// SLICK SLIDER (RESPONSIVE)
+// -----------------------------------------------------------------------------

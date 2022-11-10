@@ -1,0 +1,109 @@
+// -----------------------------------------------------------------------------
+// BROWSE SERVICE PROVIDERS
+// -----------------------------------------------------------------------------
+
+    // -----------------------------------------------------------------------------
+    // RESULTS
+    // -----------------------------------------------------------------------------
+    .service-providers-search-results{
+        .result-set{
+            .result{
+                height: 230px;
+                background: #ffffff;
+                @include border-radius(3px);
+                border: 1px solid #e7e7e7;
+                overflow: hidden;
+
+                .logo{
+                    width: 230px;
+                    height: 230px;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .info{
+                    width: calc(100% - 430px);
+
+                    .service-provider-name{
+                        color: $text-color;
+                        font-size: 2em;
+                    }
+
+                    .service-provider-location{
+                        font-size: 1.4em;
+                        color: #818181;
+                        font-weight: 500;
+                    }
+
+                    .rating-reviews{
+                        svg{
+                            width: 20px;
+                            height: 20px;
+                            position: relative;
+                            top: -2px;
+                        }
+
+                        .rating{
+                            font-size: 1.5em;
+                            color: #ffc400;
+                            font-weight: 600;
+                        }
+
+                        .reviews{
+                            font-size: 1.2em;
+                            color: #818181;
+                            font-weight: 500;
+                        }
+                    }
+                }
+
+                .price-cta{
+                    width: 200px;
+
+                    .starting-from-price{
+                        text-align: center;
+
+                        .title{
+                            font-size: 1.4em;
+                            font-weight: 600;
+                            color: #818181;
+                        }
+
+                        .price{
+                            font-size: 1.3em;
+                            font-weight: 500;
+                            color: #818181;
+                            line-height: 30px;
+
+                            span{
+                                font-size: 2em;
+                                font-weight: 700;
+                                color: $secondary-color;
+                            }
+                        }
+                    }
+
+                    .show-location-on-map-link{
+                        font-size: 1.4em;
+                    }
+
+                    .view-details-btn{
+                        width: 100%;
+                        text-decoration: none;
+                        font-size: 1.4em;
+                    }
+                }
+            }
+        }
+    }
+
+// -----------------------------------------------------------------------------
+// BROWSE SERVICE PROVIDERS (RTL)
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// BROWSE SERVICE PROVIDERS (RESPONSIVE)
+// -----------------------------------------------------------------------------

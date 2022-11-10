@@ -1,0 +1,182 @@
+// -----------------------------------------------------------------------------
+// NAVIGATION BAR
+// -----------------------------------------------------------------------------
+.desktop-navigation-bar{
+    background: #ffffff;
+    position: fixed;
+    top: 0px;
+    @include translate(0px, -40px);
+    right: 0px;
+    left: 0px;
+    height: 80px;
+    z-index: 10;
+    @include transition;
+    @include box-shadow(0px, 0px, 15px, 0px, rgba(94,94,94,0.15));
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    .logo-how-to{
+        height: inherit;
+
+        .logo{
+            height: 60px;
+            position: relative;
+
+            img{
+                width: auto;
+                height: inherit;
+
+                &:first-child{
+                    opacity: 1;
+                }
+
+                &:last-child{
+                    opacity: 0;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                }
+            }
+        }
+
+        .how-to{
+            font-size: 1.4em;
+            color: $primary-color;
+            text-decoration: none;
+        }
+    }
+
+    .navigation-links{
+        ul{
+            li{
+                a{
+                    font-size: 1.6em;
+                    color: $text-color;
+                    text-decoration: none;
+                    cursor: pointer;
+                    @include transition;
+                }
+
+                &.sign-in{
+                    svg{
+                        width: 18px;
+                        height: 18px;
+
+                        path{
+                            @include transition;
+                        }
+                    }
+                }
+
+                &.shopping-cart{
+                    position: relative;
+
+                    svg{
+                        width: 25px;
+                        height: 25px;
+                        
+                        path{
+                            @include transition;
+                        }
+                    }
+
+                    &.has-items{
+                        span{
+                            position: absolute;
+                            top: -10px;
+                            right: -7px;
+                            width: 20px;
+                            height: 20px;
+                            color: #ffffff;
+                            background: #cf0000;
+                            @include border-radius(50%);
+                            text-align: center;
+                            line-height: 20px;
+                            font-size: 0.8em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.transparent{
+        background: transparent;
+        position: absolute;
+        @include translate(0px, 0px);
+        @include box-shadow(0, 0, 0, 0, transparent);
+        @include transition(0.2s, linear);
+
+        .logo-how-to{    
+            .logo{
+                img{
+                    &:first-child{
+                        opacity: 0;
+                    }
+    
+                    &:last-child{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .how-to{
+            color: #ffffff;
+        }
+
+        .navigation-links{
+            ul{
+                li{
+                    a{
+                        color: #ffffff;
+                    }
+    
+                    &.sign-in{
+                        svg path{
+                            fill: #ffffff;
+                        }
+                    }
+    
+                    &.shopping-cart{
+                        svg path{
+                            fill: #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// NAVIGATION BAR (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+    .desktop-navigation-bar{
+        .navigation-links{
+            ul{
+                li{    
+                    &.shopping-cart{
+                        svg{
+                            @include flip-image;
+                        }
+    
+                        &.has-items{
+                            span{
+                                left: -7px;
+                                right: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// NAVIGATION BAR (RESPONSIVE)
+// -----------------------------------------------------------------------------

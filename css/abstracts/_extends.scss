@@ -1,0 +1,269 @@
+// -----------------------------------------------------------------------------
+// CONTAINER & CENTER MAX WIDTH
+// -----------------------------------------------------------------------------
+.container{
+    width: 100%;
+    height: inherit;
+
+    .center-max-width{
+        width: $default-width-center-percent;
+        height: inherit;
+        max-width: $default-max-width;
+        margin: auto;
+    }
+}
+
+// -----------------------------------------------------------------------------
+// DISPLAY FLEX
+// -----------------------------------------------------------------------------
+.display-flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+// -----------------------------------------------------------------------------
+// FLEX DIRECTION ROW
+// -----------------------------------------------------------------------------
+.flex-direction-row{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+// -----------------------------------------------------------------------------
+// FLEX DIRECTION COLUMN
+// -----------------------------------------------------------------------------
+.flex-direction-column{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+// -----------------------------------------------------------------------------
+// FLEX WRAP
+// -----------------------------------------------------------------------------
+.flex-wrap{
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+// -----------------------------------------------------------------------------
+// FLEX NO WRAP
+// -----------------------------------------------------------------------------
+.flex-nowrap{
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+// -----------------------------------------------------------------------------
+// JUSTIFY CONTENT FLEX START
+// -----------------------------------------------------------------------------
+.justify-content-flex-start{
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+// -----------------------------------------------------------------------------
+// JUSTIFY CONTENT FLEX END
+// -----------------------------------------------------------------------------
+.justify-content-flex-end{
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+// -----------------------------------------------------------------------------
+// JUSTIFY CONTENT CENTER
+// -----------------------------------------------------------------------------
+.justify-content-center{
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+// -----------------------------------------------------------------------------
+// JUSTIFY CONTENT SPACE BETWEEN
+// -----------------------------------------------------------------------------
+.justify-content-space-between{
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+// -----------------------------------------------------------------------------
+// JUSTIFY CONTENT SPACE AROUND
+// -----------------------------------------------------------------------------
+.justify-content-space-around{
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+// -----------------------------------------------------------------------------
+// JUSTIFY CONTENT SPACE EVENLY
+// -----------------------------------------------------------------------------
+.justify-content-space-evenly{
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN ITEMS FLEX START
+// -----------------------------------------------------------------------------
+.align-items-flex-start{
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN ITEMS FLEX END
+// -----------------------------------------------------------------------------
+.align-items-flex-end{
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN ITEMS CENTER
+// -----------------------------------------------------------------------------
+.align-items-center{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN ITEMS STRETCH
+// -----------------------------------------------------------------------------
+.align-items-stretch{
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN ITEMS BASELINE
+// -----------------------------------------------------------------------------
+.align-items-baseline{
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN CONTENT FLEX START
+// -----------------------------------------------------------------------------
+.align-content-flex-start{
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN CONTENT FLEX END
+// -----------------------------------------------------------------------------
+.align-content-flex-end{
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN CONTENT CENTER
+// -----------------------------------------------------------------------------
+.align-content-center{
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN CONTENT STRETCH
+// -----------------------------------------------------------------------------
+.align-content-stretch{
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN CONTENT BASELINE
+// -----------------------------------------------------------------------------
+.align-content-baseline{
+    -ms-flex-line-pack: baseline;
+    align-content: baseline;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN CONTENT SPACE BETWEEN
+// -----------------------------------------------------------------------------
+.align-content-space-between{
+    -ms-flex-line-pack: space-between;
+    align-content: space-between;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN CONTENT SPACE AROUND
+// -----------------------------------------------------------------------------
+.align-content-space-around{
+    -ms-flex-line-pack: space-around;
+    align-content: space-around;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN CONTENT SPACE EVENLY
+// -----------------------------------------------------------------------------
+.align-content-space-evenly{
+    -ms-flex-line-pack: space-evenly;
+    align-content: space-evenly;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN SELF AUTO
+// -----------------------------------------------------------------------------
+.align-self-auto{
+    -ms-flex-item-align: auto;
+    align-self: auto;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN SELF FLEX START
+// -----------------------------------------------------------------------------
+.align-self-flex-start{
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN SELF FLEX END
+// -----------------------------------------------------------------------------
+.align-self-flex-end{
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN SELF CENTER
+// -----------------------------------------------------------------------------
+.align-self-center{
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN SELF STRETCH
+// -----------------------------------------------------------------------------
+.align-self-stretch{
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+}
+
+// -----------------------------------------------------------------------------
+// ALIGN SELF BASELINE
+// -----------------------------------------------------------------------------
+.align-self-baseline{
+    -ms-flex-item-align: baseline;
+    align-self: baseline;
+}

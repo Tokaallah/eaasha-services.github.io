@@ -1,0 +1,54 @@
+// -----------------------------------------------------------------------------
+// ERRORS
+// -----------------------------------------------------------------------------
+.error-msg{
+    text-align: center;
+
+    h1, p{
+        max-width: 700px;
+    }
+
+    p{
+        a{
+            font-weight: 500;
+            color: $text-color;
+            @include transition;
+
+            &:hover{
+                text-decoration: underline;
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+noscript{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+    position: fixed;
+    z-index: 9999;
+
+    div, section{
+        @extend .display-flex;
+    }
+
+    .error-msg{
+        height: 100%;
+
+        h1, p{
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// ERRORS (RTL)
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// ERRORS (RESPONSIVE)
+// -----------------------------------------------------------------------------

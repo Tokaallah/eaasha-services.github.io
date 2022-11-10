@@ -1,0 +1,99 @@
+// -----------------------------------------------------------------------------
+// TABS BAR
+// -----------------------------------------------------------------------------
+.tabs-bar{
+    .tabs-list{
+        cursor: pointer;
+        border: 1px solid #c8c8c8;
+        border-right: 0px;
+        @include transition;
+
+        &:first-child{
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+
+        &:last-child{
+            border-right: 1px solid #c8c8c8;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+
+        svg{
+            width: 30px;
+            height: 30px;
+
+            path{
+                @include transition;
+            }
+        }
+
+        span{
+            font-size: 1.8em;
+            color: $text-color;
+            @include transition;
+        }
+
+        &.active{
+            background: $primary-color;
+            border-color: $primary-color;
+
+            svg{
+                path{
+                    fill: #ffffff;
+                }
+            }
+
+            span{
+                color: #ffffff;
+            }
+        }
+
+        &:hover{
+            background: $primary-color-light;
+            border-color: $primary-color-light;
+
+            svg{
+                path{
+                    fill: #ffffff;
+                }
+            }
+
+            span{
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// TABS BAR (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+    .tabs-bar{
+        .tabs-list{
+            border-right: 1px solid #c8c8c8;
+            border-left: 0px;
+    
+            &:first-child{
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+            }
+    
+            &:last-child{
+                border-left: 1px solid #c8c8c8;
+                border-right: 0px;
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// TABS BAR (RESPONSIVE)
+// -----------------------------------------------------------------------------

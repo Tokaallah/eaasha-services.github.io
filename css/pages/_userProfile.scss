@@ -1,0 +1,155 @@
+// -----------------------------------------------------------------------------
+// USER PROFILE PAGE
+// -----------------------------------------------------------------------------
+.user-profile{
+    margin-top: -80px;
+    position: relative;
+    
+    .center-max-width{
+        background-color: #ffffff;
+        @include border-radius(3px);
+
+        h3{
+            color: $text-color;
+            font-size: 2em;
+            font-weight: 600;
+
+            .user-name{
+                color: $primary-color;
+            }
+        }
+
+        .links-side-bar{
+            width: 300px;
+            background-color: #f3f3f3;
+            @include border-radius(5px);
+
+            .sidebar-heading{
+                font-size: 1.8em;
+                font-weight: 600;
+            }
+
+            hr{
+                width: 100%;
+            }
+
+            .sidebar-list-items{
+                
+                li{
+                    a{
+                        text-decoration: none;
+
+                        svg{
+                            width: 18px;
+                            height: 18px;
+
+                            path{
+                                fill: #909090;
+                            }
+                        }
+
+                        .list-item-desc{
+                            font-size: 1.5em;
+                            font-weight: 500;
+                            color: #909090;
+                            line-height: 1.8em;
+                        }
+
+                        &:hover{
+
+                            .list-item-desc{
+                                color: $primary-color;
+                            }
+
+                            svg{
+                                path{
+                                    fill: $primary-color;
+                                }
+                            }
+                        }
+                    }
+                    
+                    &.active{
+                        a{
+                            .list-item-desc{
+                                color: $primary-color;
+                            }
+    
+                            svg{
+                                path{
+                                    fill: $primary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .user-profile-info{
+            width: calc(100% - 350px);
+            border: 1px solid #dfdfdf;
+            @include border-radius(5px);
+
+            .heading{
+                font-size: 2em;
+                color: $secondary-color;
+            }
+
+            img{
+                width: 120px;
+                height: 120px;
+            }
+
+            .user-data{
+                .user-title{
+                    font-size: 1.5em;
+                    font-weight: 600;
+                }
+
+                .user-desc{
+                    font-size: 1.2em;
+                    color: #909090;
+
+                    .text-decoration{
+                        color: $secondary-color;
+                    }
+                }
+            }
+
+            form{
+                .name-input{
+                    width: 48%;
+                }
+                a{
+                    color: $secondary-color;
+                    text-decoration: none;
+
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+
+            .save-btn{
+                svg{
+                    path{
+                        fill: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// -----------------------------------------------------------------------------
+// USER PROFILE PAGE (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+
+}
+
+// -----------------------------------------------------------------------------
+// USER PROFILE PAGE (RESPONSIVE)
+// -----------------------------------------------------------------------------

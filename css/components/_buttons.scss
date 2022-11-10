@@ -1,0 +1,91 @@
+// -----------------------------------------------------------------------------
+// BUTTONS
+// -----------------------------------------------------------------------------
+.btn{
+    width: auto;
+    height: 48px;
+    padding: 0 15px;
+    font-family: $primary-font-family, $secondary-font-family;
+    font-size: 1.6em;
+    font-weight: 500;
+    line-height: 48px;
+    @include transition;
+    border: none;
+    @include border-radius(3px);
+    outline: none;
+    @include appearance(none);
+    cursor: pointer;
+
+    &.with-icon{
+        svg{
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &.primary{
+        background: $primary-color-light;
+        color: #ffffff;
+
+        &:hover{
+            background: $primary-color;
+        }
+    }
+
+    &.secondary{
+        background: $secondary-color-light;
+        color: #ffffff;
+
+        &:hover{
+            background: $secondary-color;
+        }
+    }
+}
+
+.link{
+    width: auto;
+    height: auto;
+    font-family: $primary-font-family, $secondary-font-family;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-decoration: underline;
+    @include transition;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+
+    &.primary{
+        color: $primary-color-light;
+    
+        &:hover{
+            color: $secondary-color;
+        }
+    }
+
+    &.secondary{
+        color: $secondary-color-light;
+    
+        &:hover{
+            color: $primary-color;
+        }
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+// BUTTONS (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+    .btn{
+        &.with-icon{
+            svg{
+                @include flip-image;
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// BUTTONS (RESPONSIVE)
+// -----------------------------------------------------------------------------

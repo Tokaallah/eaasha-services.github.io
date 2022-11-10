@@ -1,0 +1,146 @@
+// -----------------------------------------------------------------------------
+// TRACK ORDER PAGE
+// -----------------------------------------------------------------------------
+.current-order-status{
+    margin-top: -80px;
+    position: relative;
+
+    .center-max-width {
+        background-color: #ffffff;
+        border-radius: 3px;
+
+        .track-list{
+            .track-items{
+                ul{
+                    width: 100%;
+                    position: relative;
+
+                    .status{
+                        position: relative;
+                        width: 25%;
+                        
+                        &::before{
+                            position: absolute;
+                            content: '';
+                            display: block;
+                            width: 65px;
+                            height: 65px;
+                            border: 1px solid #909090;
+                            border-radius: 50%;
+                            background-color: #ffffff;
+                            top: 0px;
+                            z-index: 1;
+                        }
+    
+                        &::after{
+                            position: absolute;
+                            content: '';
+                            width: 255px;
+                            height: 1px;
+                            background-color: #909090;
+                            top: 33px;
+                            left: 212px;
+                        }
+    
+                        &:last-child{
+                            &::after{
+                                display: none;
+                                content: none;
+                            }
+                        }
+                            
+                        .status-icon{
+                            z-index: 2;
+                            width: 65px;
+                            height: 65px;
+                            
+                            svg{
+                                width: 35px;
+                                height: 35px;
+                                z-index: 2;
+        
+                                path{
+                                    fill: #909090;
+                                }
+                                rect{
+                                    fill: #909090;
+                                }
+                            }
+                        }
+
+                        .status-desc{
+                            font-size: 1.4em;
+                            font-weight: 500;
+                            color: #909090;
+                            text-align: center;
+                            z-index: 2;
+                            position: relative;
+                        }
+
+                        &.active{
+                            &::before{
+                                border: 1px solid $secondary-color;
+                            }
+
+                            &::after{
+                                background-color: $secondary-color;
+                            }
+                            svg{    
+                                path{
+                                    fill: $secondary-color;
+                                    @include transition;
+                                }
+                                rect{
+                                    fill: $secondary-color;
+                                    @include transition;
+                                }
+                            }
+
+                            .status-desc{
+                                color: $secondary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.map-track{
+    .track-order-google-map{
+        width: 100%;
+        height: 450px;
+    }
+}
+// -----------------------------------------------------------------------------
+// TRACK ORDER PAGE (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+    .current-order-status{
+        .center-max-width {    
+            .track-list{
+                .track-items{
+                    ul{
+                        .status{
+                            &::after{
+                                right: 212px;
+                                left: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .map-track{
+        .track-order-google-map{
+            width: 100%;
+            height: 450px;
+        }
+    }
+}
+// -----------------------------------------------------------------------------
+// TRACK ORDER PAGE (RESPONSIVE)
+// -----------------------------------------------------------------------------

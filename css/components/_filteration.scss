@@ -1,0 +1,183 @@
+// -----------------------------------------------------------------------------
+// FILTERATION
+// -----------------------------------------------------------------------------
+.filteration{
+    position: relative;
+    margin-top: -50px;
+
+    .center-max-width{
+        position: relative;
+        background: #ffffff;
+        @include box-shadow(0px, 0px, 50px, 0px, rgba(94, 94, 94, 0.1));
+        @include border-radius(3px);
+    }
+
+    .search-filter{
+        .form-row.search{
+            width: 600px;
+
+            input{
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+        }
+
+        .filter-btn{
+            background: #e8e8e8;
+            padding-left: 51px;
+            padding-right: 20px;
+            background: #f1f1f1;
+            border: 1px solid #cccdcd;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-left: 0px;
+
+            i{
+                font-size: 0.8em;
+            }
+
+            svg{
+                path{
+                    @include transition;
+                }
+            }
+
+            &:hover{
+                border-color: $primary-color;
+                background: $primary-color;
+                color: #ffffff;
+
+                & ~ svg{
+                    path{
+                        fill: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+
+    .form-row.sort-by{
+        width: 200px;
+    }
+
+    .filter-popup{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        z-index: 9;
+        top: 100%;
+        left: 0px;
+        right: 0px;
+        background: transparent;
+        visibility: hidden;
+        opacity: 0;
+        @include transition;
+
+        .filter-popup-container{
+            position: relative;
+            background: #ffffff;
+            @include box-shadow(0px, 0px, 50px, 0px, rgba(94, 94, 94, 0.1));
+            @include border-radius(3px);
+
+            .close-filter-form{
+                height: auto;
+                position: absolute;
+                top: 30px;
+                right: 40px;
+                font-size: 1.6em;
+                color: #c7c7c7;
+                padding: 0px;
+                line-height: normal;
+                background: transparent;
+
+                &:hover{
+                    color: $text-color;
+                }
+            }
+
+            .title{
+                font-size: 1.8em;
+                color: $primary-color;
+            }
+            
+            .filter-form{
+                .form-row{
+                    width: 23%;
+                }
+            }
+        }
+
+        &.open{
+            visibility: visible;
+            opacity: 1;
+            @include translate(0px, -20px);
+        }
+    }
+
+    &.show{
+        @include transition;
+        background: #ffffff;
+        @include box-shadow(0px, 0px, 50px, 0px, rgba(94, 94, 94, 0.1));
+        @include border-radius(0px);
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        z-index: 9;
+        @include translate(0px, 130px);
+
+        .center-max-width{
+            @include box-shadow(0px, 0px, 50px, 0px, rgba(94, 94, 94, 0));
+            padding: 15px 0px;
+            @include transition;
+        }
+
+        .filter-popup{
+            &.open{
+                @include translate(0px, -5px);
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// FILTERATION (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+    .filteration{
+        .search-filter{
+            .form-row.search{
+                input{
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                    border-top-right-radius: 3px;
+                    border-bottom-right-radius: 3px;
+                }
+            }
+
+            .filter-btn{
+                padding-right: 51px;
+                padding-left: 20px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+                border-right: 0px;
+                border-left: 1px solid #cccdcd;
+            }
+        }
+
+        .filter-popup{
+            .filter-popup-container{
+                .close-filter-form{
+                    right: auto;
+                    left: 40px;
+                }
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// FILTERATION (RESPONSIVE)
+// -----------------------------------------------------------------------------

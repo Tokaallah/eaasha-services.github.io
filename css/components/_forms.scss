@@ -1,0 +1,478 @@
+// -----------------------------------------------------------------------------
+// FORMS
+// -----------------------------------------------------------------------------
+.form-row{
+    input[type="text"]{
+        width: 100%;
+        height: 48px;
+        padding: 10px 15px;
+        font-family: $primary-font-family, $secondary-font-family;
+        font-size: 1.4em;
+        font-weight: 500;
+        color: $text-color;
+        background: transparent;
+        border: 1px solid #cccdcd;
+        @include border-radius(3px);
+        outline: none;
+        @include transition;
+        line-height: 48px;
+        @include appearance(none);
+    
+        &:focus{
+            border: 1px solid $primary-color;
+        }
+    }
+
+    label{
+        font-size: 1.5em;
+        font-weight: 600;
+        color: $primary-color;
+    }
+
+    .check-box{
+        width: 100%;
+        height: auto;
+        position: relative;
+
+        input[type="checkbox"]{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            left: 0px;
+            outline: none;
+            cursor: pointer;
+            @include transition;
+            @include appearance(none);
+
+            &::before{
+                content: '';
+                width: 38px;
+                height: 18px;
+                background: #e4e4e4;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                outline: none;
+                @include border-radius(3px);
+            }
+
+            &::after{
+                content: '';
+                width: 17px;
+                height: 14px;
+                background: #ccc;
+                position: absolute;
+                left: 3px;
+                top: 2px;
+                @include border-radius(3px);
+                outline: none;
+                @include transition;
+            }
+
+            &:checked{
+                &::after{
+                    background: $primary-color;
+                    @include translate(calc(100% - 2px), 0px);
+                }
+            }
+        }
+
+        span{
+            width: calc(100% - 53px);
+            font-family: $primary-font-family, $secondary-font-family;
+            font-size: 1.4em;
+            font-weight: 500;
+            outline: none;
+            color: $text-color;
+            line-height: 18px;
+
+            strong{
+                font-weight: 600;
+                color: #909090;
+            }
+        }
+    }
+    
+    .radios-box{
+        width: 100%;
+        height: auto;
+        position: relative;
+        
+        input[type="radio"]{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            left: 0px;
+            outline: none;
+            cursor: pointer;
+            @include transition;
+            @include appearance(none);
+
+            &::before{
+                content: '';
+                width: 20px;
+                height: 20px;
+                background: #e4e4e4;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                outline: none;
+                @include border-radius(50%);
+            }
+
+            &::after{
+                content: '';
+                width: 10px;
+                height: 10px;
+                background: $primary-color;
+                position: absolute;
+                left: 5px;
+                top: 5px;
+                @include border-radius(50%);
+                opacity: 0;
+                outline: none;
+                @include scale(0);
+                @include transition;
+            }
+
+            &:hover{
+                &::after{
+                    opacity: 0.3;
+                    @include scale(0.75);
+                }
+            }
+
+            &:checked{
+                &::after{
+                    opacity: 1;
+                    @include scale(1);
+                }
+            }
+        }
+
+        span{
+            width: calc(100% - 40px);
+            font-family: $primary-font-family, $secondary-font-family;
+            font-size: 1.4em;
+            font-weight: 500;
+            outline: none;
+            color: $text-color;
+            line-height: 20px;
+        }
+
+        &.with-icon{
+            svg{
+                width: 22px;
+                height: 22px;
+                margin-left: 30px;
+                position: relative;
+                top: -1px;
+            }
+
+            span{
+                width: calc(100% - 62px);
+            }
+        }
+    }
+
+    textarea{
+        width: 100%;
+        height: 80px;
+        padding: 10px 15px;
+        font-family: $primary-font-family, $secondary-font-family;
+        font-size: 1.5em;
+        font-weight: 500;
+        color: $text-color;
+        background: transparent;
+        border: 1px solid #cccdcd;
+        @include border-radius(3px);
+        outline: none;
+        @include transition;
+        line-height: normal;
+        resize: none;
+        @include appearance(none);
+    
+        &:focus{
+            border: 1px solid $primary-color;
+        }
+    }
+
+    .select2-container{
+        width: 100% !important;
+    }
+
+    .select2-container .select2-selection--single, .select2-container--default .select2-selection--multiple{
+        height: 48px;
+        @include border-radius(3px);
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__placeholder{
+        font-family: $primary-font-family, $secondary-font-family;
+        font-size: 1.1em;
+        font-weight: 500;
+        line-height: 28px;
+        color: #aaaaaa;
+    }
+
+    .select2-container .select2-search--inline .select2-search__field,
+    .select2-container--default .select2-selection--multiple .select2-selection__rendered li,
+    .form-row.with-icon .select2-container--default .select2-selection--single .select2-selection__rendered{
+        font-family: $primary-font-family, $secondary-font-family;
+        font-size: 1.05em;
+    }
+
+    .select2-container--default .select2-search--inline .select2-search__field{
+        margin-top: 0px;
+    }
+
+    .select2-container--default .select2-selection--multiple .select2-selection__rendered,
+    .select2-container--default .select2-selection--multiple .select2-selection__rendered li,
+    .select2-container--default .select2-search--inline .select2-search__field{
+        height: 37px;
+    }
+
+    .select2-container--default .select2-selection--multiple .select2-selection__rendered{
+        padding-left: 15px;
+    }
+
+    .select2-container--default .select2-selection--multiple .select2-selection__choice,
+    .select2-container--default .select2-selection--multiple .select2-selection__rendered{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+        color: $text-color;
+        line-height: 37px;
+    }
+
+    button[type="submit"]{
+        width: 100%;
+    }
+
+    &.with-icon{
+        position: relative;
+
+        svg{
+            position: absolute;
+            width: 27px;
+            height: 27px;
+            left: 10px;
+            top: 10px;
+        }
+
+        input{
+            padding-left: 51px;
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__rendered{
+            padding-left: 35px;
+            line-height: 28px;
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__rendered{
+            padding-left: 45px;
+        }
+    }
+
+    &.dropdown{
+        position: relative;
+
+        .select2-container .select2-selection--single, 
+        .select2-container--default .select2-selection--multiple{
+            &::after{
+                content: "\f107";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                font-size: 1em;
+                color: #aaaaaa;
+                position: absolute;
+                top: calc(50% - 4px);
+                right: 15px;
+            }
+        }
+    }
+}
+
+.upload-field{
+    width: 500px;
+    cursor: pointer;
+    color: #909090;
+    background: transparent;
+    border: 1px solid #cccdcd;
+    @include border-radius(3px);
+    outline: none;
+    @include transition;
+    line-height: 48px;
+    @include appearance(none);
+    position: relative;
+    cursor: pointer;
+
+    input{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .fake-upload{
+        width: 100%;
+        height: 100%;
+
+        .file-name{
+            width: calc(100% - 190px);
+            padding: 0px 15px;
+            overflow: hidden;
+            text-align: left;
+            font-size: 1.4em;
+            font-weight: 500;
+        }
+
+        .choose-file-btn{
+            width: 190px;
+            height: 100%;
+            padding: 0px 20px;
+            background: $primary-color;
+            color: #ffffff;
+            line-height: 48px;
+            @include border-radius(3px);
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            font-size: 1.4em;
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+}
+
+@include placeholder{
+    font-family: $primary-font-family, $secondary-font-family;
+    font-size: inherit;
+    font-weight: 500;
+    color: #aaaaaa;
+    @include transition;
+}
+
+@include placeholder-focus{
+    color: transparent !important;
+}
+
+// -----------------------------------------------------------------------------
+// FORMS (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+    .form-row{    
+        .check-box{
+            input[type="checkbox"]{
+                &::before{
+                    content: '';
+                    right: 0px;
+                    left: auto;
+                }
+    
+                &::after{
+                    right: 3px;
+                    left: auto;
+                }
+    
+                &:checked{
+                    &::after{
+                        @include translate(calc(100% - 31px), 0px);
+                    }
+                }
+            }
+        }
+        
+        .radios-box{
+            input[type="radio"]{
+                &::before{
+                    right: 0px;
+                    left: auto;
+                }
+    
+                &::after{
+                    right: 5px;
+                    left: auto;
+                }
+            }
+    
+            &.with-icon{
+                svg{
+                    margin-right: 30px;
+                    margin-left: 0px;
+                }
+            }
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__rendered{
+            padding-right: 15px;
+            padding-left: 0px;
+        }
+    
+        &.with-icon{
+            svg{
+                left: auto;
+                right: 10px;
+            }
+    
+            input{
+                padding-right: 51px;
+                padding-left: 0px;
+            }
+    
+            .select2-container--default .select2-selection--single .select2-selection__rendered{
+                padding-right: 35px;
+                padding-left: 0px;
+            }
+    
+            .select2-container--default .select2-selection--multiple .select2-selection__rendered{
+                padding-right: 45px;
+                padding-left: 0px;
+            }
+        }
+    
+        &.dropdown{
+            .select2-container .select2-selection--single, 
+            .select2-container--default .select2-selection--multiple{
+                &::after{
+                    left: 15px;
+                    right: auto;
+                }
+            }
+        }
+
+        .select2-container .select2-search--inline .select2-search__field,
+        .with-icon .select2-container--default .select2-selection--single .select2-selection__rendered{
+            text-align: right;
+            padding-right: 0px;
+        }
+    }
+
+    .upload-field{        
+        .fake-upload{
+            .file-name{
+                text-align: right;
+            }
+    
+            .choose-file-btn{
+                @include border-radius(3px);
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// FORMS (RESPONSIVE)
+// -----------------------------------------------------------------------------

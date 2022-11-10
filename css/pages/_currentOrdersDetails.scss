@@ -1,0 +1,279 @@
+// -----------------------------------------------------------------------------
+// CURRENT ORDERS DETAILS PAGE
+// -----------------------------------------------------------------------------
+.current-orders-details{
+    .center-max-width{
+        position: relative;
+        background: #ffffff;
+        @include box-shadow(0px, 0px, 50px, 0px, rgba(94, 94, 94, 0.1));
+        @include border-radius(3px);
+        margin-top: -50px;
+
+        .order-details{
+            width: calc(100% - 650px);
+            
+            .order-items{
+                border: 1px solid #dfdfdf;
+                @include border-radius(3px);
+
+                .item{
+                    color: $text-color;
+
+                    .title{
+                        font-size: 1.4em;
+                        font-weight: 600;
+                        width: 30%;
+                    }
+
+                    .desc{
+                        font-size: 1.4em;
+                        font-weight: 500;
+                        width: 70%;
+                    }
+                }
+            }
+
+            a{
+                text-decoration: none;
+            }
+
+            .order-status{
+                h4{
+                    color: $primary-color;
+                }
+                .status-list{
+                    ul{
+                        width: 100%;
+                        position: relative;
+
+                        .status{
+                            position: relative;
+                            width: 25%;
+
+                            &::before{
+                                position: absolute;
+                                content: '';
+                                display: block;
+                                width: 65px;
+                                height: 65px;
+                                border: 1px solid #909090;
+                                border-radius: 50%;
+                                background-color: #ffffff;
+                                top: 0px;
+                                z-index: 1;
+
+                            }
+
+                            &::after{
+                                position: absolute;
+                                content: '';
+                                width: 80px;
+                                height: 1px;
+                                background-color: #909090;
+                                top: 33px;
+                                left: 113px;
+                            }
+
+                            &:last-child{
+                                &::after{
+                                    display: none;
+                                    content: none;
+                                }
+                            }
+                               
+                            .status-icon{
+                                z-index: 2;
+                                width: 100%;
+                                height: 65px;
+                                
+                                svg{
+                                    width: 35px;
+                                    height: 35px;
+    
+                                    path{
+                                        fill: #909090;
+                                    }
+                                    rect{
+                                        fill: #909090;
+                                    }
+                                }
+                            }
+                            
+
+                            .status-desc{
+                                font-size: 1.3em;
+                                font-weight: 500;
+                                color: #909090;
+                                text-align: center;
+                                z-index: 2;
+                                position: relative;
+                            }
+
+                            &.active{
+                                &::before{
+                                    border: 1px solid $secondary-color;
+                                }
+    
+                                &::after{
+                                    background-color: $secondary-color;
+                                }
+                                svg{    
+                                    path{
+                                        fill: $secondary-color;
+                                        @include transition;
+                                    }
+                                    rect{
+                                        fill: $secondary-color;
+                                        @include transition;
+                                    }
+                                }
+    
+                                .status-desc{
+                                    color: $secondary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .invoice-details{
+            width: 600px;
+            background: #f3f3f3;
+            @include border-radius(5px);
+            overflow: hidden;
+
+            .shopping-cart-items{
+                width: 100%;
+
+                .item{
+                    width: 100%;
+
+                    img{
+                        width: 100px;
+                    }
+
+                    .name-quantity{
+                        width: 200px;
+
+                        .name{
+                            font-size: 1.4em;
+                            line-height: 16px;
+                            font-weight: 500;
+                        }
+
+                        .quantity{
+                            font-size: 1.3em;
+                            font-weight: 600;
+                            color: #909090;
+                        }
+
+                        .review-btn{
+                            font-size: 1.3em;
+                            font-weight: 600;
+                            text-decoration: none;
+                            color: $primary-color;
+                            cursor: pointer;
+                            -webkit-transition: .3s ease-in-out;
+                            transition: .3s ease-in-out;
+
+                            &:hover{
+                                color: $primary-color-light;
+                            }
+                        }
+                    }
+
+                    .price{
+                        width: calc(100% - 300px);
+                        text-align: right;
+                        font-weight: 600;
+                        font-size: 1.4em;
+                    }
+                }
+            }
+
+            .invoice-data{
+                .item{
+                    width: 100%;
+
+                    .title{
+                        font-size: 1.4em;
+                        line-height: 16px;
+                        font-weight: 500;
+                    }
+
+                    .price{
+                        width: calc(100% - 300px);
+                        text-align: right;
+                        font-weight: 600;
+                        font-size: 1.4em;
+                    }
+
+                    &.final-total{
+                        .title, .price{
+                            font-size: 1.5em;
+                            font-weight: 600;
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        button[type="submit"]{
+            width: 100%;
+
+            svg{
+                path{
+                    fill: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// CURRENT ORDERS DETAILS PAGE (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+    .current-orders-details{
+        .center-max-width{
+            .order-details{
+                .order-status{
+                    .status-list{
+                        ul{
+                            .status{
+                                &::after{
+                                    right: 113px;
+                                    left: auto;
+                                }                            
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .invoice-details{
+                .shopping-cart-items{
+                    .item{
+                        .price{
+                            text-align: left;
+                        }
+                    }
+                }
+    
+                .invoice-data{
+                    .item{
+                        .price{
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// -----------------------------------------------------------------------------
+// CURRENT ORDERS DETAILS PAGE (RESPONSIVE)
+// -----------------------------------------------------------------------------

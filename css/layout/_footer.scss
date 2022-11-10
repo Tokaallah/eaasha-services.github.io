@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// FOOTER
+// -----------------------------------------------------------------------------
+.footer{
+    background: $separator-color;
+
+    .top-footer{
+        .most-selling,
+        .popular-searches,
+        .sitemap{
+            a{
+                font-size: 1.5em;
+                font-weight: 500;
+                text-decoration: none;
+                color: $text-color;
+            }
+        }
+    
+        .sitemap{
+            width: 450px;
+    
+            h6{
+                width: 100%;
+            }
+    
+            a{
+                width: 48%;
+            }
+        }
+    }    
+
+    .copyrights{
+        @include linear-gradient-background($gradient-primary);
+        background-size: 200% 200%;
+        @include animation(topBar 4s ease-in-out infinite);
+        @include transition;
+
+        span{
+            font-size: 1.3em;
+            color: #ffffff;
+        }
+
+        .social-media{
+            a{
+                font-size: 1.5em;
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// FOOTER (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+    
+}
+
+// -----------------------------------------------------------------------------
+// FOOTER (RESPONSIVE)
+// -----------------------------------------------------------------------------

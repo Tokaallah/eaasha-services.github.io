@@ -1,0 +1,364 @@
+// -----------------------------------------------------------------------------
+// SERVICE PROVIDER
+// -----------------------------------------------------------------------------
+
+    // -----------------------------------------------------------------------------
+    // INTRO
+    // -----------------------------------------------------------------------------
+    .service-provider-intro{
+        position: relative;
+        margin-top: -150px;
+
+        .service-provider-card{
+            height: 230px;
+            background: #ffffff;
+            @include box-shadow(0px, 0px, 50px, 0px, rgba(94, 94, 94, 0.1));
+            @include border-radius(3px);
+            overflow: hidden;
+
+            .logo{
+                width: 230px;
+                height: 230px;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            
+            .service-provider-info{
+                width: calc(100% - 230px);
+
+                .service-provider-name{
+                    color: $text-color;
+                    font-weight: 600;
+                    font-size: 2em;
+
+                }
+
+                .service-provider-address{
+                    font-size: 1.5em;
+                    color: #818181;
+                    font-weight: 500;
+                }
+
+                .show-location-btn{
+                    font-size: 1.4em;
+                }
+
+                .rating-reviews{
+                    text-align: center;
+
+                    .rating{
+                        svg{
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        span{
+                            font-size: 1.7em;
+                            color: #ffc400;
+                            font-weight: 600;
+                        }                        
+                    }
+    
+                    .reviews{
+                        font-size: 1.2em;
+                        color: #818181;
+                        font-weight: 500;
+                    }
+                }
+            }
+            
+            .meals-details{
+                svg{
+                    width: 24px;
+                    height: 24px;
+                }
+
+                span{
+                    color: #818181;
+                    font-size: 1.3em;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    // -----------------------------------------------------------------------------
+    // GALLERY
+    // -----------------------------------------------------------------------------
+    .service-provider-gallery{
+        .service-provider-gallery-slider{
+            a{
+                width: 242px;
+                height: 170px;
+                background-size: cover !important;
+                background-position: center center !important;
+                background-repeat: no-repeat !important;
+                outline: none;
+            }
+
+            .slick-slide{
+                margin: 0 20px;
+            }
+            
+            .slick-list{
+                margin: 0 -20px;
+            }
+        }
+    }
+
+    // -----------------------------------------------------------------------------
+    // TABS
+    // -----------------------------------------------------------------------------
+    .menu-reviews-tab-bar{
+        .tabs-bar{
+            .tabs-list{
+                width: 50%;
+            }
+        }
+    }
+
+    // -----------------------------------------------------------------------------
+    // MENU
+    // -----------------------------------------------------------------------------
+    .service-provider-menu{
+        .categories-list{
+            width: 300px;
+
+            .menu-heading{
+                color: $secondary-color;
+            }
+
+            .categories{
+                background: #ffffff;
+                @include box-shadow(0px, 0px, 50px, 0px, rgba(94, 94, 94, 0.1));
+                @include border-radius(3px);
+                overflow: hidden;
+
+                a{
+                    text-decoration: none;
+                    font-size: 1.5em;
+                    font-weight: 500;
+                    color: $text-color;
+                    position: relative;
+                    @include transition;
+                    cursor: pointer;
+
+                    &::before{
+                        content: '';
+                        width: 4px;
+                        height: 100%;
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        background: $primary-color;
+                        opacity: 0;
+                        @include transition;
+                    }
+
+                    &:hover{
+                        background: $primary-color-overlay;
+
+                        &::before{
+                            opacity: 0.5;
+                        }
+                    }
+
+                    &.active{
+                        color: $primary-color;
+                        background: $primary-color-overlay;
+                        font-weight: 600;
+
+                        &::before{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu-list{
+            width: calc(100% - 300px);
+            border-left: 1px solid #cccccc;
+
+            .meal-category{
+                .category-name{
+                    color: $text-color;
+                    background: #f8f8f8;
+                    @include border-radius(3px);
+                }
+
+                .category-items{
+                    .item{
+                        border-bottom: 1px solid #cccccc;
+
+                        &:last-child{
+                            border-bottom: 0px;
+                        }
+
+                        img{
+                            width: 200px;
+                            height: auto;
+                        }
+
+                        .meal-details{
+                            width: calc(100% - 400px);
+
+                            .meal-name{
+                                font-size: 1.8em;
+                            }
+
+                            .meal-description{
+                                font-size: 1.4em;
+                            }
+
+                            .quantity-left{
+                                svg{
+                                    width: 20px;
+                                    height: 20px;
+                                }
+
+                                span{
+                                    font-size: 1.2em;
+                                    color: #818181;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+
+                        .price-quantity-cta{
+                            width: 200px;
+                            text-align: center;
+
+                            .price{
+                                font-size: 1.3em;
+                                font-weight: 500;
+                                color: #818181;
+                                line-height: 30px;
+
+                                span{
+                                    font-size: 2em;
+                                    font-weight: 700;
+                                    color: $secondary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.fixed{
+            .categories-list{
+                position: fixed;
+                top: 120px;
+            }
+
+            .menu-list{
+                margin-left: 300px;
+            }
+        }
+    }
+
+    // -----------------------------------------------------------------------------
+    // REVIEWS
+    // -----------------------------------------------------------------------------
+    .reviews{
+        .all-reviews{
+            .review{
+                background: #fafafa;
+                @include border-radius(3px);
+
+                .img-user-info-rating{
+                    img{
+                        width: 60px;
+                        height: 60px;
+                    }
+
+                    .user-info{
+                        .user-name{
+                            font-weight: 600;
+                        }
+
+                        .review-datetime{
+                            svg{
+                                width: 20px;
+                                height: 20px;
+                            }
+
+                            span{
+                                font-size: 1.3em;
+                                position: relative;
+                                top: 2px;
+                            }
+                        }
+                    }
+
+                    .rating{
+                        margin-left: auto;
+
+                        svg{
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+// -----------------------------------------------------------------------------
+// SERVICE PROVIDER (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+
+    // -----------------------------------------------------------------------------
+    // MENU
+    // -----------------------------------------------------------------------------
+    .service-provider-menu{
+        .categories-list{
+            .categories{
+                a{
+                    &::before{
+                        right: 0px;
+                        left: auto;
+                    }
+                }
+            }
+        }
+
+        .menu-list{
+            border-right: 1px solid #cccccc;
+            border-left: 0px;
+        }
+
+        &.fixed{
+            .menu-list{
+                margin-right: 300px;
+                margin-left: 0px;
+            }
+        }
+    }
+
+    // -----------------------------------------------------------------------------
+    // REVIEWS
+    // -----------------------------------------------------------------------------
+    .reviews{
+        .all-reviews{
+            .review{
+                .img-user-info-rating{
+                    .rating{
+                        margin-left: 0px;
+                        margin-right: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// SERVICE PROVIDER (RESPONSIVE)
+// -----------------------------------------------------------------------------

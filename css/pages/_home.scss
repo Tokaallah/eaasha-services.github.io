@@ -1,0 +1,305 @@
+// -----------------------------------------------------------------------------
+// HOMEPAGE
+// -----------------------------------------------------------------------------
+
+    // -----------------------------------------------------------------------------
+    // HEADER
+    // -----------------------------------------------------------------------------
+    .homepage-header-intro{
+        height: 650px;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        text-align: center;
+        position: relative;
+
+        h1{
+            max-width: 700px;
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    // -----------------------------------------------------------------------------
+    // FIND WHAT YOU NEED
+    // -----------------------------------------------------------------------------
+    .homepage-find-what-you-need{
+        position: relative;
+        margin-top: -100px;
+
+        .center-max-width{
+            background: #ffffff;
+            @include box-shadow(0px, 0px, 50px, 0px, rgba(94, 94, 94, 0.1));
+            @include border-radius(3px);
+
+            form{
+                .form-row{
+                    width: 24%;
+                }
+            }
+        }
+    }
+
+    // -----------------------------------------------------------------------------
+    // ORDER STEPS
+    // -----------------------------------------------------------------------------
+    .homepage-order-steps{
+        img{
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    // -----------------------------------------------------------------------------
+    // OFFERS & PROMOTIONS
+    // -----------------------------------------------------------------------------
+    .homepage-offers-promotions{
+        .offers-promotions-slider{
+            .offer-promotion{
+                width: 32%;
+                height: auto;
+                background: #ffffff;
+                @include border-radius(3px);
+                border: 1px solid #e7e7e7;
+                overflow: hidden;
+
+                .offer-price-img{
+                    width: 100%;
+                    position: relative;
+                    outline: none;
+
+                    .offer-price{
+                        width: auto;
+                        white-space: nowrap;
+                        position: absolute;
+                        top: 0px;
+                        left: 30px;
+                        background: rgba(255, 255, 255, 0.8);
+                        text-align: center;
+                        z-index: 1;
+                        border-bottom-left-radius: 3px;
+                        border-bottom-right-radius: 3px;
+
+                        span{
+                            font-size: 2.8em;
+                            color: $secondary-color;
+                            font-weight: 700;
+                        }
+
+                        p{
+                            font-size: 1.2em;
+                            color: $text-color;
+                            font-weight: 500;
+                        }
+                    }
+
+                    .offer-img{
+                        width: 100%;
+                        height: auto;
+                        @include border-radius(3px);
+                        border-bottom-left-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                    }
+                }
+                
+                .resturant-details{
+                    width: 100%;
+                    text-decoration: none;
+                    outline: none;
+
+                    .resturant-img{
+                        width: 50px;
+                        height: 50px;
+                        @include border-radius(50%);
+                        border: 1px solid #cecece;
+                        overflow: hidden;
+                    }
+
+                    .content{
+                        width: calc(100% - 65px);
+    
+                        .resturant-name{
+                            font-size: 1.5em;
+                            color: #818181;
+                            font-weight: 600;
+                        }
+
+                        .resutrant-location{
+                            font-size: 1.3em;
+                            color: #818181;
+                            font-weight: 500;
+                        }
+                    }
+                }
+
+                .meal-info{
+                    width: 100%;
+
+                    .meal-name{
+                        font-size: 1.7em;
+                        font-weight: 700;
+                    }
+
+                    .meal-description{
+                        font-size: 1.4em;
+                        color: #818181;
+                    }
+                }
+
+                .meal-details{
+                    width: 100%;
+
+                     .meals-count-number,
+                    .meal-category,
+                    .extra-services{
+                        svg{
+                            width: 25px;
+                            height: 25px;
+                        }
+
+                        span{
+                            font-size: 1.3em;
+                            font-weight: 600;
+                            line-height: 25px;
+                            color: #bfbfbf;
+                        }
+                    }
+
+                    .meals-count-number,
+                    .meal-category{
+                        width: 48%;
+                    }
+
+                    .extra-services{
+                        width: 100%;
+                    }
+                }
+
+                .form-row{
+                    width: 100%;
+
+                    .add-to-cart{
+                        border-top-left-radius: 0px;
+                        border-top-right-radius: 0px;
+
+                        svg{
+                            path{
+                                fill: #ffffff;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .slick-slide{
+                margin: 0 20px;
+            }
+            
+            .slick-list{
+                margin: 0 -20px;
+            }
+
+            .slick-arrow{
+                width: 40px;
+                height: 40px;
+                top: -70px;
+                @include border-radius(3px);
+                @include rotate(0deg);
+                background: $primary-color-light;
+                @include transition;
+
+                &::before{
+                    border-top: 2px solid #ffffff;
+                    border-left: 2px solid #ffffff;
+                }
+
+                &:hover{
+                    background: $primary-color;
+                }
+
+                &.slick-next{
+                    right: 0px;
+
+                    &::before{
+                        @include rotate(135deg);
+                        top: -3px;
+                        left: -6px;
+                    }
+                }
+
+                &.slick-prev{
+                    left: auto;
+                    right: 60px;
+
+                    &::before{
+                        @include rotate(-45deg);
+                        top: -3px;
+                        left: -2px;
+                    }
+                }
+            }
+        }
+    }
+
+// -----------------------------------------------------------------------------
+// HOMEPAGE (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+    // -----------------------------------------------------------------------------
+    // HEADER
+    // -----------------------------------------------------------------------------
+    .homepage-header-intro{
+        h1{
+            max-width: 650px;
+        }
+    }
+
+    // -----------------------------------------------------------------------------
+    // OFFERS & PROMOTIONS
+    // -----------------------------------------------------------------------------
+    .homepage-offers-promotions{
+        .offers-promotions-slider{
+            .offer-promotion{
+                .offer-price-img{
+                    .offer-price{
+                        left: auto;
+                        right: 30px;
+                    }
+                }
+
+                .resturant-details{
+                    .content{
+                        .resturant-name{
+                            line-height: 20px;
+                        }
+
+                        .resutrant-location{
+                            line-height: 16px;
+                        }
+                    }
+                }
+            }
+
+            .slick-arrow{
+                &:hover{
+                    background: $primary-color;
+                }
+
+                &.slick-next{
+                    left: 60px;
+                    right: auto;
+                }
+
+                &.slick-prev{
+                    right: auto;
+                    left: 0px;
+                }
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// HOMEPAGE (RESPONSIVE)
+// -----------------------------------------------------------------------------

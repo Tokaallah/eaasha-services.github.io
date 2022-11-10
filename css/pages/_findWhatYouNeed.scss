@@ -1,0 +1,182 @@
+// -----------------------------------------------------------------------------
+// FIND WHAT YOU NEED
+// -----------------------------------------------------------------------------
+
+    // -----------------------------------------------------------------------------
+    // RESULTS
+    // -----------------------------------------------------------------------------
+    .search-results{
+        .result-set{
+            .result{
+                width: 32%;
+                height: auto;
+                background: #ffffff;
+                @include border-radius(3px);
+                border: 1px solid #e7e7e7;
+                overflow: hidden;
+
+                .offer-price-img{
+                    width: 100%;
+                    position: relative;
+
+                    .offer-price{
+                        width: auto;
+                        white-space: nowrap;
+                        position: absolute;
+                        top: 0px;
+                        left: 30px;
+                        background: rgba(255, 255, 255, 0.8);
+                        text-align: center;
+                        z-index: 1;
+                        border-bottom-left-radius: 3px;
+                        border-bottom-right-radius: 3px;
+
+                        span{
+                            font-size: 2.8em;
+                            color: $secondary-color;
+                            font-weight: 700;
+                        }
+
+                        p{
+                            font-size: 1.2em;
+                            color: $text-color;
+                            font-weight: 500;
+                        }
+                    }
+
+                    .offer-img{
+                        width: 100%;
+                        height: auto;
+                        @include border-radius(3px);
+                        border-bottom-left-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                    }
+                }
+                
+                .resturant-details{
+                    width: 100%;
+                    text-decoration: none;
+
+                    .resturant-img{
+                        width: 50px;
+                        height: 50px;
+                        @include border-radius(50%);
+                        border: 1px solid #cecece;
+                        overflow: hidden;
+                    }
+
+                    .content{
+                        width: calc(100% - 65px);
+    
+                        .resturant-name{
+                            font-size: 1.5em;
+                            color: #818181;
+                            font-weight: 600;
+                        }
+
+                        .resutrant-location{
+                            font-size: 1.3em;
+                            color: #818181;
+                            font-weight: 500;
+                        }
+                    }
+                }
+
+                .meal-info{
+                    width: 100%;
+
+                    .meal-name{
+                        font-size: 1.7em;
+                        font-weight: 700;
+                    }
+
+                    .meal-description{
+                        font-size: 1.4em;
+                        color: #818181;
+                    }
+                }
+
+                .meal-details{
+                    width: 100%;
+
+                    .meals-count-number,
+                    .meal-category,
+                    .extra-services{
+                        svg{
+                            width: 25px;
+                            height: 25px;
+                        }
+
+                        span{
+                            font-size: 1.3em;
+                            font-weight: 600;
+                            line-height: 25px;
+                            color: #bfbfbf;
+                        }
+                    }
+
+                    .meals-count-number,
+                    .meal-category{
+                        width: 48%;
+                    }
+
+                    .extra-services{
+                        width: 100%;
+                    }
+                }
+
+                .form-row{
+                    width: 100%;
+
+                    .add-to-cart{
+                        border-top-left-radius: 0px;
+                        border-top-right-radius: 0px;
+
+                        svg{
+                            path{
+                                fill: #ffffff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+// -----------------------------------------------------------------------------
+// FIND WHAT YOU NEED (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+
+    // -----------------------------------------------------------------------------
+    // RESULTS
+    // -----------------------------------------------------------------------------
+    .search-results{
+        .result-set{
+            .result{
+                .offer-price-img{
+                    .offer-price{
+                        left: auto;
+                        right: 30px;
+                    }
+                }
+
+                .resturant-details{
+                    .content{
+                        .resturant-name{
+                            line-height: 20px;
+                        }
+
+                        .resutrant-location{
+                            line-height: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// FIND WHAT YOU NEED (RESPONSIVE)
+// -----------------------------------------------------------------------------

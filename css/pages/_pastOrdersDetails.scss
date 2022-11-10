@@ -1,0 +1,336 @@
+// -----------------------------------------------------------------------------
+// PAST ORDERS DETAILS PAGE
+// -----------------------------------------------------------------------------
+.Current-orders{
+    .center-max-width{
+        position: relative;
+        background: #ffffff;
+        @include box-shadow(0px, 0px, 50px, 0px, rgba(94, 94, 94, 0.1));
+        @include border-radius(3px);
+        margin-top: -50px;
+
+        .order-details{
+            width: calc(100% - 650px);
+            
+            .order-items{
+                border: 1px solid #dfdfdf;
+                @include border-radius(3px);
+
+                .item{
+                    color: $text-color;
+
+                    .title{
+                        font-size: 1.4em;
+                        font-weight: 600;
+                        width: 30%;
+                    }
+
+                    .desc{
+                        font-size: 1.4em;
+                        font-weight: 500;
+                        width: 70%;
+                    }
+                }
+            }
+
+            a{
+                text-decoration: none;
+            }
+        }
+
+        .invoice-details{
+            width: 600px;
+            background: #f3f3f3;
+            @include border-radius(5px);
+            overflow: hidden;
+
+            .shopping-cart-items{
+                width: 100%;
+
+                .item{
+                    width: 100%;
+
+                    img{
+                        width: 100px;
+                    }
+
+                    .name-quantity{
+                        width: 200px;
+
+                        .name{
+                            font-size: 1.4em;
+                            line-height: 16px;
+                            font-weight: 500;
+                        }
+
+                        .quantity{
+                            font-size: 1.3em;
+                            font-weight: 600;
+                            color: #909090;
+                        }
+
+                        .review-btn{
+                            font-size: 1.3em;
+                            font-weight: 600;
+                            text-decoration: none;
+                            color: $primary-color;
+                            cursor: pointer;
+                            -webkit-transition: .3s ease-in-out;
+                            transition: .3s ease-in-out;
+
+                            &:hover{
+                                color: $primary-color-light;
+                                @include transition;
+                            }
+                        }
+                    }
+
+                    .price{
+                        width: calc(100% - 300px);
+                        text-align: right;
+                        font-weight: 600;
+                        font-size: 1.4em;
+                    }
+                }
+            }
+
+            .invoice-data{
+                .item{
+                    width: 100%;
+
+                    .title{
+                        font-size: 1.4em;
+                        line-height: 16px;
+                        font-weight: 500;
+                    }
+
+                    .price{
+                        width: calc(100% - 300px);
+                        text-align: right;
+                        font-weight: 600;
+                        font-size: 1.4em;
+                    }
+
+                    &.final-total{
+                        .title, .price{
+                            font-size: 1.5em;
+                            font-weight: 600;
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        button[type="submit"]{
+            width: 100%;
+
+            svg{
+                path{
+                    fill: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// REVIEW POPUP
+// -----------------------------------------------------------------------------
+.review-popup{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2000;
+    @include transition;
+    visibility: hidden;
+    opacity: 0;
+
+    .popup-box{
+        width: 60%;
+        height: 320px;
+        background-color: #ffffff;
+        @include border-radius(3px);
+
+        .form-img{
+            width: 48%;
+            height: 100%;
+            @include border-radius(3px);
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            background-position: center center !important;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+        }
+
+        .form-parag{
+            width: 48%;
+            padding-right: 30px;
+            position: relative;
+
+            .close-popup-btn{
+                position: absolute;
+                top: -35px;
+                right: 11px;
+                background-color: transparent;
+                padding: 0;
+                font-size: 1.6em;
+                color: #c7c7c7;
+
+                &:hover{
+                    color: $text-color;
+                }
+            }
+
+            h3{
+                font-size: 1.8em;
+                text-align: center;
+            }
+
+            .rate-this-meal{
+                font-size: 1.4em;
+            }
+
+            .rating{
+                .rating-stars{
+                    input{
+                        display: none;
+
+                        &:checked{
+                            ~{
+                                label{
+                                    &::after{
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    label{
+                        cursor: pointer;
+                        padding-left: 5px;
+
+                        &::before{
+                            content: '\f005';
+                            font-family: 'Font Awesome 5 Free';
+                            font-weight: 900;
+                            font-size: 18px;
+                            color: #c7c7c7;
+                        }
+
+                        &::after{
+                            content: '\f005';
+                            font-family: 'Font Awesome 5 Free';
+                            font-weight: 900;
+                            font-size: 18px;
+                            color: #fad42d;
+                            position: absolute;
+                            display: block;
+                            top: 54px;
+                            @include transition;
+                            opacity: 0;
+                        }
+
+                        &:hover{
+                            &::after{
+                                opacity: 1;
+                            }
+                            ~{
+                                label{
+                                    &::after{
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }                                     
+                }
+            }
+
+            .write-review{
+                font-size: 1.4em;
+            }
+
+            svg{
+                width: 120px;
+            }
+        }
+        hr{
+            width: 100%;
+        }
+    }
+
+    &.open{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+// -----------------------------------------------------------------------------
+// PAST ORDERS DETAILS PAGE (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+   .Current-orders{
+        .center-max-width{
+            .invoice-details{
+                .shopping-cart-items{
+                    .item{
+                        .price{
+                            text-align: left;
+                        }
+                    }
+                }
+
+                .invoice-data{
+                    .item{
+                        .price{
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+// -----------------------------------------------------------------------------
+// REVIEW POPUP
+// -----------------------------------------------------------------------------
+    .review-popup{
+        .popup-box{
+            .form-img{
+                @include border-radius(3px);
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+            }
+
+            .form-parag{
+                padding-right: 0px;
+                padding-left: 30px;
+
+                .close-popup-btn{
+                    top: -30px;
+                    left: 11px;
+                    right: auto;
+                }
+                
+                .rating{
+                    .rating-stars{
+                        label{
+                            &::after{
+                                transform: translate(30px, 7px);
+                            }
+                        }                                     
+                    }
+                }
+            }
+        }
+    }
+}
+// -----------------------------------------------------------------------------
+// PAST ORDERS DETAILS PAGE (RESPONSIVE)
+// -----------------------------------------------------------------------------

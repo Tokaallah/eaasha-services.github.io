@@ -1,0 +1,109 @@
+// -----------------------------------------------------------------------------
+// HelveticaNeue FONT FAMILY
+// -----------------------------------------------------------------------------
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: font("HelveticaNeue-UltraLight.eot");
+    src: font("HelveticaNeue-UltraLight.woff2") format("woff2"),
+         font("HelveticaNeue-UltraLight.woff") format("woff"),
+         font("HelveticaNeue-UltraLight.ttf") format("truetype"),
+         font("HelveticaNeue-UltraLight.svg#HelveticaNeue-UltraLight") format("svg"),
+         font("HelveticaNeue-UltraLight.eot?#iefix") format("embedded-opentype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: font("HelveticaNeue-Thin.eot");
+    src: font("HelveticaNeue-Thin.woff2") format("woff2"),
+         font("HelveticaNeue-Thin.woff") format("woff"),
+         font("HelveticaNeue-Thin.ttf") format("truetype"),
+         font("HelveticaNeue-Thin.svg#HelveticaNeue-Thin") format("svg"),
+         font("HelveticaNeue-Thin.eot?#iefix") format("embedded-opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: font("HelveticaNeue-Regular.eot");
+    src: font("HelveticaNeue-Regular.woff2") format("woff2"),
+         font("HelveticaNeue-Regular.woff") format("woff"),
+         font("HelveticaNeue-Regular.ttf") format("truetype"),
+         font("HelveticaNeue-Regular.svg#HelveticaNeue-Regular") format("svg"),
+         font("HelveticaNeue-Regular.eot?#iefix") format("embedded-opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: font("HelveticaNeue-Medium.eot");
+    src: font("HelveticaNeue-Medium.woff2") format("woff2"),
+         font("HelveticaNeue-Medium.woff") format("woff"),
+         font("HelveticaNeue-Medium.ttf") format("truetype"),
+         font("HelveticaNeue-Medium.svg#HelveticaNeue-Medium") format("svg"),
+         font("HelveticaNeue-Medium.eot?#iefix") format("embedded-opentype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: font("HelveticaNeue-Bold.eot");
+    src: font("HelveticaNeue-Bold.woff2") format("woff2"),
+         font("HelveticaNeue-Bold.woff") format("woff"),
+         font("HelveticaNeue-Bold.ttf") format("truetype"),
+         font("HelveticaNeue-Bold.svg#HelveticaNeue-Bold") format("svg"),
+         font("HelveticaNeue-Bold.eot?#iefix") format("embedded-opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: font("HelveticaNeue-Black.eot");
+    src: font("HelveticaNeue-Black.woff2") format("woff2"),
+         font("HelveticaNeue-Black.woff") format("woff"),
+         font("HelveticaNeue-Black.ttf") format("truetype"),
+         font("HelveticaNeue-Black.svg#HelveticaNeue-Black") format("svg"),
+         font("HelveticaNeue-Black.eot?#iefix") format("embedded-opentype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+// -----------------------------------------------------------------------------
+// HelveticaNeueLTArabic FONT FAMILY
+// -----------------------------------------------------------------------------
+@font-face {
+    font-family: 'HelveticaNeueLTArabic';
+    src: font("HelveticaNeueLTArabic-Regular.eot");
+    src: font("HelveticaNeueLTArabic-Regular.woff2") format("woff2"),
+         font("HelveticaNeueLTArabic-Regular.woff") format("woff"),
+         font("HelveticaNeueLTArabic-Regular.ttf") format("truetype"),
+         font("HelveticaNeueLTArabic-Regular.svg#HelveticaNeueLTArabic-Regular") format("svg"),
+         font("HelveticaNeueLTArabic-Regular.eot?#iefix") format("embedded-opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLTArabic';
+    src: font("HelveticaNeueLTArabic-Bold.eot");
+    src: font("HelveticaNeueLTArabic-Bold.woff2") format("woff2"),
+         font("HelveticaNeueLTArabic-Bold.woff") format("woff"),
+         font("HelveticaNeueLTArabic-Bold.ttf") format("truetype"),
+         font("HelveticaNeueLTArabic-Bold.svg#HelveticaNeueLTArabic-Bold") format("svg"),
+         font("HelveticaNeueLTArabic-Bold.eot?#iefix") format("embedded-opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

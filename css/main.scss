@@ -1,0 +1,91 @@
+@charset 'UTF-8';
+
+// -----------------------------------------------------------------------------
+// CONFIRGURATIONS
+// -----------------------------------------------------------------------------
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'abstracts/extends';
+
+// -----------------------------------------------------------------------------
+// RESETS
+// -----------------------------------------------------------------------------
+@import
+  'resets/browser',
+  'resets/fonts';
+
+// -----------------------------------------------------------------------------
+// BASE STUFF
+// -----------------------------------------------------------------------------
+@import
+  'base/fonts',
+  'base/base',
+  'base/typography',
+  'base/keyframes',
+  'base/helpers';
+
+// -----------------------------------------------------------------------------
+// VENDORS
+// -----------------------------------------------------------------------------
+@import
+  '../plugins/@fortawesome/fontawesome-free/css/all.min.css',
+  '../plugins/remodal/dist/remodal.css',
+  '../plugins/remodal/dist/remodal-default-theme.css',
+  '../plugins/plyr/dist/plyr.css',
+  '../plugins/select2/dist/css/select2.min.css',
+  '../plugins/lightbox2/dist/css/lightbox.min.css',
+  '../plugins/slick-slider/slick/slick.css',
+  '../plugins/air-datepicker/dist/css/datepicker.min.css';
+@import
+  'vendors/fontAwesome',
+  'vendors/slickSlider',
+  'vendors/reModal',
+  'vendors/select2',
+  'vendors/lightBox2',
+  'vendors/datePicker';
+
+// -----------------------------------------------------------------------------
+// LAYOUTS
+// -----------------------------------------------------------------------------
+@import
+  'layout/topBar',
+  'layout/navBar',
+  'layout/mobileNavBar',
+  'layout/shoppingCartSideBar',
+  'layout/footer';
+
+// -----------------------------------------------------------------------------
+// COMPONENTS
+// -----------------------------------------------------------------------------
+@import
+  'components/buttons',
+  'components/forms',
+  'components/filteration',
+  'components/pagination',
+  'components/breadcrumb',
+  'components/tabsBar',
+  'components/preloader',
+  'components/scrollToTop';
+
+// -----------------------------------------------------------------------------
+// PAGES SPECIFIC STYLES
+// -----------------------------------------------------------------------------
+@import
+  'pages/home',
+  'pages/findWhatYouNeed',
+  'pages/browseServiceProviders',
+  'pages/serviceProvider',
+  'pages/logIn',
+  'pages/forgotYourPassword',
+  'pages/resetPassword',
+  'pages/activateAccount',
+  'pages/register',
+  'pages/checkout',
+  'pages/orders',
+  'pages/currentOrdersDetails',
+  'pages/pastOrdersDetails',
+  'pages/trackOrder',
+  'pages/userProfile',
+  'pages/errors';

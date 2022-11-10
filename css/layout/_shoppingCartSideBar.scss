@@ -1,0 +1,246 @@
+// -----------------------------------------------------------------------------
+// SHOPPING CART SIDEBAR
+// -----------------------------------------------------------------------------
+.shopping-cart-sidebar{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: transparent;
+    z-index: 2000;
+    visibility: hidden;
+    @include transition;
+
+    .overlay{
+        width: 100%;
+        height: 100%;
+        background: $text-color;
+        opacity: 0;
+        @include transition;
+    }
+
+    .checkout-btn{
+        width: 340px;
+        position: fixed;
+        bottom: 0px;
+        right: -340px;
+        border-bottom-right-radius: 0px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        text-align: center;
+        text-decoration: none;
+
+        span{
+            font-weight: 600;
+        }
+    }
+
+    .shopping-cart-container{
+        width: 340px;
+        height: inherit;
+        position: fixed;
+        top: 0px;
+        right: -340px;
+        bottom: 0px;
+        background: #fafafa;
+        overflow: auto;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        @include box-shadow(0px, 0px, 15px, 0px, rgba(94,94,94,0.15));
+        @include transition;
+
+        .close-shopping-cart{
+            height: auto;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.6em;
+            color: #c7c7c7;
+            padding: 0px;
+            line-height: normal;
+            background: transparent;
+
+            &:hover{
+                color: $text-color;
+            }
+        }
+
+        .title{
+            svg{
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .items{
+            height: auto;
+
+            .item{
+                width: 100%;
+                background: #ffffff;
+                @include box-shadow(0px, 0px, 50px, 0px, rgba(94, 94, 94, 0.1));
+                @include border-radius(3px);
+    
+                .item-price-img{
+                    width: 100%;
+                    position: relative;
+
+                    .item-price{
+                        position: absolute;
+                        top: 0px;
+                        right: 20px;
+                        background: rgba(255, 255, 255, 0.8);
+                        text-align: center;
+                        border-bottom-left-radius: 3px;
+                        border-bottom-right-radius: 3px;
+
+                        span{
+                            font-size: 2em;
+                            color: $secondary-color;
+                            font-weight: 700;
+                            line-height: 20px;
+                        }
+
+                        p{
+                            font-size: 1em;
+                            color: $text-color;
+                            font-weight: 600;
+                            line-height: 12px;
+                        }
+                    }
+
+                    .item-img{
+                        width: 100%;
+                        height: auto;
+                        @include border-radius(3px);
+                    }
+                }                
+
+                .item-title{
+                    font-size: 1.5em;
+                }
+
+                .quantity-total-price{
+                    width: 100%;
+
+                    .quantity{
+                        span{
+                            font-size: 1.3em;
+                            color: $text-color;
+                            font-weight: 600;
+                        }
+
+                        input{
+                            width: 80px;
+                            height: 35px;
+                            padding: 10px;
+                            font-weight: 500;
+                        }
+                    }
+
+                    .total-price{
+                        text-align: center;
+
+                        .price{
+                            font-size: 2em;
+                            font-weight: 700;
+                            color: $primary-color;
+                            line-height: 15px;
+                        }
+
+                        .currency{
+                            font-size: 1em;
+                            color: #868686;
+                            font-weight: 600;
+                            display: block;
+                        }
+                    }
+                }
+
+                .remove-item-btn{
+                    width: auto;
+                    height: auto;
+                    background: transparent;
+                    padding: 0px;
+                    line-height: normal;
+                    color: #c20000;
+                    font-size: 1.3em;
+                    font-weight: 500;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &.open{
+        visibility: visible;
+
+        .overlay{
+            opacity: 0.5;
+        }
+    
+        .shopping-cart-container,
+        .checkout-btn{
+            @include translate(-340px, 0px);
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// SHOPPING CART SIDEBAR (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+    .shopping-cart-sidebar{
+        .checkout-btn{
+            left: -340px;
+            right: auto;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 0px;
+        }
+    
+        .shopping-cart-container{
+            left: -340px;
+            right: auto;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+    
+            .close-shopping-cart{
+                left: 20px;
+                right: auto;
+            }
+    
+            .title{
+                svg{
+                    @include flip-image;
+                }
+            }
+    
+            .items{
+                .item{
+                    .item-price-img{
+                        .item-price{
+                            left: 20px;
+                            right: auto;
+                        }
+                    }                
+                }
+            }
+        }
+    
+        &.open{        
+            .shopping-cart-container,
+            .checkout-btn{
+                @include translate(340px, 0px);
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// SHOPPING CART SIDEBAR (RESPONSIVE)
+// -----------------------------------------------------------------------------

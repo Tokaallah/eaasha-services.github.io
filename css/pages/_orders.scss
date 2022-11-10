@@ -1,0 +1,204 @@
+// -----------------------------------------------------------------------------
+// ORDERS PAGE TABS
+// -----------------------------------------------------------------------------
+.order-tabs{
+    position: relative;
+    margin-top: -80px;
+    
+    .center-max-width{
+        background-color: #ffffff;
+        @include border-radius(3px);
+    }
+
+    .tabs-bar{
+        .tab-btn{
+            text-decoration: none;
+            width: 45%;
+            font-size: 1.5em;
+            color: $text-color;
+            border: 1px solid #969696;
+
+            &:first-child{
+                border-bottom-left-radius: 3px;
+                border-top-left-radius: 3px;
+                border-right: none;
+            }
+            &:last-child{
+                border-bottom-right-radius: 3px;
+                border-top-right-radius: 3px;
+                border-left: none;
+            }
+            
+            svg{
+                width: 30px;
+                height: 30px;
+            }
+
+            &:hover{
+                background: #51b5cf;
+                border-color: #51b5cf;
+                color: #ffffff;
+                border: 1px solid #51b5cf;
+                @include transition;
+
+                svg{
+                    path{
+                        fill: #ffffff;
+                    }
+                }
+            }
+        }
+
+        .active {
+            background: #0088b5;
+            border-color: #0088b5;
+            color: #ffffff;
+            border: 1px solid #51b5cf;
+
+            svg{
+                path{
+                    fill: #ffffff;
+                }
+            }
+        }
+    } 
+}
+// -----------------------------------------------------------------------------
+// ORDERS PAGE
+// -----------------------------------------------------------------------------
+.current-orders{
+    .current-order-card{
+        width: 48%;
+        height: 229px;
+        border: 1px solid #969696;
+        border-radius: 3px;
+
+        .order{
+            height: 100%;
+
+            .current-order-details{
+                width: 80%;
+                padding-left: 15px;
+
+                h2{
+                    font-size: 2em;
+                    font-weight: 600;
+                }
+
+                .title{
+                    width: 30%;
+                    color: #969696;
+                    font-weight: 600;
+                    font-size: 1.4em;
+                }
+    
+                .desc{
+                    width: 70%;
+                    font-size: 1.4em;
+                    font-weight: 500;
+                    color: $text-color;
+                }
+            }
+        }
+
+        .current-order-icons{
+            width: 20%;
+            height: 100%;
+            
+            .icon{
+                width: 100%;
+                height: 33.3%;
+
+                a{
+                    text-decoration: none;
+                    color: #ffffff;
+                    padding: 15px;
+                    font-size: 1.2em;
+    
+                    svg{
+                        width: 30px;
+                        height: 30px;
+    
+                        path{
+                            fill: #ffffff;
+                        }
+                    }
+                }
+            }
+
+            .details{
+                background-color: $primary-color;
+
+                &:hover{
+                    background-color: $primary-color-light;
+                    @include transition;
+                }
+            }
+            .track{
+                background-color: $secondary-color-light;
+
+                &:hover{
+                    background-color: $secondary-color;
+                    @include transition;
+                }
+            }
+            .print{
+                background-color: $primary-color-light;
+
+                &:hover{
+                    background-color: $primary-color;
+                    @include transition;
+                }
+            }            
+        }
+
+        .track-order{
+            .icon{
+                height: 50%;
+
+                a{
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+// -----------------------------------------------------------------------------
+// ORDERS PAGE (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+    .tabs-bar{
+        .tab-btn{
+            &:first-child{
+                border-bottom-left-radius: 0px;
+                border-top-left-radius: 0px;
+                border-bottom-right-radius: 3px;
+                border-top-right-radius: 3px;
+                border-left: none;
+                border-right: 1px solid #969696;
+            }
+            &:last-child{
+                border-bottom-right-radius: 0px;
+                border-top-right-radius: 0px;
+                border-bottom-left-radius: 3px;
+                border-top-left-radius: 3px;
+                border-right: none;
+                border-left: 1px solid #969696;
+            }
+        }
+    }
+    
+    .current-orders{
+        .current-order-card{    
+            .order{
+                .current-order-details{
+                    padding-right: 15px;
+                    padding-left: 0px;
+                }
+            }
+        }
+    }
+}
+// -----------------------------------------------------------------------------
+// ORDERS PAGE (RESPONSIVE)
+// -----------------------------------------------------------------------------

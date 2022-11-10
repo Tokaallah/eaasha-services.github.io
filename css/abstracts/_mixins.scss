@@ -1,0 +1,124 @@
+// -----------------------------------------------------------------------------
+// BACKGROUND LINEAR GRADIENT
+// -----------------------------------------------------------------------------
+@mixin linear-gradient-background($content){
+    background: -webkit-gradient($content);
+    background: linear-gradient($content);
+}
+
+// -----------------------------------------------------------------------------
+// BOX SHADOWS
+// -----------------------------------------------------------------------------
+@mixin box-shadow($v-offset, $y-offset, $blur, $spread, $color){
+    -webkit-box-shadow: $v-offset $y-offset $blur $spread $color;
+    box-shadow: $v-offset $y-offset $blur $spread $color;
+}
+
+// -----------------------------------------------------------------------------
+// BORDER RADIUS
+// -----------------------------------------------------------------------------
+@mixin border-radius($size){
+    border-radius: $size;
+}
+
+// -----------------------------------------------------------------------------
+// TRANSFORMS
+// -----------------------------------------------------------------------------
+@mixin transform($content){
+    -webkit-transform: $content;
+    transform: $content;
+}
+
+@mixin rotate($degree){
+    -webkit-transform: rotate($degree);
+    transform: rotate($degree);
+}
+
+@mixin translate($x, $y){
+    -webkit-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+
+@mixin scale($size){
+    -webkit-transform: scale($size);
+    transform: scale($size);
+}
+
+// -----------------------------------------------------------------------------
+// TRANSITIONS
+// -----------------------------------------------------------------------------
+@mixin transition($seconds: 0.3s, $action: ease-in-out){
+    -webkit-transition: $seconds $action;
+    transition: $seconds $action;
+}
+
+// -----------------------------------------------------------------------------
+// APPEARANCE
+// -----------------------------------------------------------------------------
+@mixin appearance($type){
+    -webkit-appearance: $type;
+    -moz-appearance: $type;
+    -ms-appearance: $type;
+    -o-appearance: $type;
+    appearance: $type;
+}
+
+// -----------------------------------------------------------------------------
+// FILTER
+// -----------------------------------------------------------------------------
+@mixin filter($content){
+    -webkit-filter: $content;
+    filter: $content;
+}
+
+// -----------------------------------------------------------------------------
+// BACKGROUND BLEND MODE
+// -----------------------------------------------------------------------------
+@mixin background-blend-mode($content){
+    background-blend-mode: $content;
+}
+
+// -----------------------------------------------------------------------------
+// FLIP IMAGE
+// -----------------------------------------------------------------------------
+@mixin flip-image{
+    -webkit-transform: scaleX(-1);    
+    transform: scaleX(-1);
+    -ms-filter: "FlipH";
+    -webkit-filter: FlipH;
+    filter: FlipH;
+}
+
+// -----------------------------------------------------------------------------
+// ANIMATION
+// -----------------------------------------------------------------------------
+@mixin animation($content){
+    -webkit-animation: $content;
+    animation: $content;
+}
+
+// -----------------------------------------------------------------------------
+// ORDER
+// -----------------------------------------------------------------------------
+@mixin order($number){
+    -webkit-box-ordinal-group: $number;
+    -ms-flex-order: $number;
+    order: $number;
+}
+
+// -----------------------------------------------------------------------------
+// PLACEHOLDERS
+// -----------------------------------------------------------------------------
+@mixin placeholder{
+    ::-webkit-input-placeholder {@content}
+    :-ms-input-placeholder      {@content}
+    ::-ms-input-placeholder     {@content}
+    ::placeholder               {@content}
+}
+
+@mixin placeholder-focus{
+    :focus::-webkit-input-placeholder {@content}
+    :focus:-ms-input-placeholder      {@content}
+    :focus::-ms-input-placeholder     {@content}
+    :focus::placeholder               {@content}
+}

@@ -1,0 +1,176 @@
+// -----------------------------------------------------------------------------
+// CHECKOUT PAGE
+// -----------------------------------------------------------------------------
+.checkout-page{
+    .center-max-width{
+        position: relative;
+        background: #ffffff;
+        @include box-shadow(0px, 0px, 50px, 0px, rgba(94, 94, 94, 0.1));
+        @include border-radius(3px);
+        margin-top: -50px;
+
+        .address-extra-services-payment{
+            width: calc(100% - 500px);
+
+            .address-details{
+                .address-details-title{
+                    font-size: 1.8em;
+                    color: $secondary-color;
+                }
+
+                .address-details-desc{
+                    font-size: 1.4em;
+                    color: $text-color;
+                }
+            }
+
+            .extra-services-details{
+                .extra-services-details-title{
+                    font-size: 1.8em;
+                    color: $secondary-color;
+                }
+
+                .extra-services-details-desc{
+                    font-size: 1.4em;
+                    color: $text-color;
+                }
+            }
+
+            .payment-details{
+                .payment-details-title{
+                    font-size: 1.8em;
+                    color: $secondary-color;
+                }
+
+                .payment-details-desc{
+                    font-size: 1.4em;
+                    color: $text-color;
+                }
+
+                .payment-list{
+                    .payment-items{
+                        // max-width: 500px;
+
+                        // .form-row{
+                        //     width: 100%;
+
+                        //     &.expiry-date,
+                        //     &.cvv-code{
+                        //         width: 49%;
+                        //     }
+                        // }
+                    }
+                }
+            }
+        }
+
+        .invoice-details{
+            width: 450px;
+            background: #f3f3f3;
+            @include border-radius(5px);
+            overflow: hidden;
+
+            .shopping-cart-items{
+                width: 100%;
+
+                .item{
+                    width: 100%;
+
+                    img{
+                        width: 100px;
+                    }
+
+                    .name-quantity{
+                        width: 200px;
+
+                        .name{
+                            font-size: 1.4em;
+                            line-height: 16px;
+                            font-weight: 500;
+                        }
+
+                        .quantity{
+                            font-size: 1.3em;
+                            font-weight: 600;
+                            color: #909090;
+                        }
+                    }
+
+                    .price{
+                        width: calc(100% - 300px);
+                        text-align: right;
+                        font-weight: 600;
+                        font-size: 1.4em;
+                    }
+                }
+            }
+
+            .invoice-data{
+                .item{
+                    width: 100%;
+
+                    .title{
+                        font-size: 1.4em;
+                        line-height: 16px;
+                        font-weight: 500;
+                    }
+
+                    .price{
+                        width: calc(100% - 300px);
+                        text-align: right;
+                        font-weight: 600;
+                        font-size: 1.4em;
+                    }
+
+                    &.final-total{
+                        .title, .price{
+                            font-size: 1.5em;
+                            font-weight: 600;
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        button[type="submit"]{
+            width: 100%;
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// CHECKOUT PAGE (RTL)
+// -----------------------------------------------------------------------------
+.rtl{
+    .checkout-page{
+        .center-max-width{
+            .invoice-details{
+                .shopping-cart-items{
+                    .item{
+                        .price{
+                            text-align: left;
+                        }
+                    }
+                }
+    
+                .invoice-data{
+                    .item{
+                        .price{
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+    
+            button[type="submit"]{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+// CHECKOUT PAGE (RESPONSIVE)
+// -----------------------------------------------------------------------------
